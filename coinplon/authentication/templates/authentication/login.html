@@ -2,6 +2,7 @@
 
 {% block content %}
 <h1>Login</h1>
+<p>{{ error }}</p>
 <form method="post">
   {% csrf_token %}
   <label for="username">Username:</label>

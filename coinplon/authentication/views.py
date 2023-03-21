@@ -10,7 +10,7 @@ def login_view(request):
         if user is not None:
             login(request, user)
             return redirect('index')
-    return render(request, 'authentication/login.html')
+    return render(request, 'authentication/login.html', {'error': 'Identifiant ou mot de passe incorrect'})
 
 def logout_view(request):
     logout(request)
